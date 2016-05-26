@@ -1,0 +1,18 @@
+name       : nuvola-app-plex
+version    : 1.1
+release    : 1
+source     :
+    - https://github.com/tiliado/nuvola-app-plex/archive/v1.1.tar.gz : 7d26b82b1489219a22d4613bff79178a0ce4ada677a69bf7c08866ac85c253e6
+license    : BSD-2-Clause
+component  : desktop.multimedia
+summary    : Plex Integration for Nuvola Player 3.
+description: |
+    Integration of Plex into your linux desktop via Nuvola Player.
+builddeps  :
+    - librsvg-devel
+rundeps    :
+    - nuvolaplayer
+build      : |
+    %make 
+install    : |
+    %make_install DEST="$installdir/usr/share/nuvolaplayer3/web_apps"
